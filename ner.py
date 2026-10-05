@@ -1,6 +1,7 @@
 from transformers import BertTokenizer
 import json
 import re
+import itertools
 
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 
@@ -37,3 +38,27 @@ for sentence in texts:
         else:
             labels[counter].append(label2id["other"])
     counter = counter + 1
+
+words = list(itertools.chain.from_iterable(texts))
+word_labels = list(itertools.chain.from_iterable(labels))
+
+encoding = tokenizer(
+    words,
+    is_split_into_words=True,
+    truncation=True,
+    padding="max_length",
+    max_length=128
+)
+
+word_ids = encoding.word_ids()
+
+token_labels = []
+
+for word_id in word_ids:
+    if word_id is None:
+        token_labels.append(-100)
+    else:
+        label = word_labels[word_id]
+        token_labels.append(label2id[label])
+
+print(token_labels)
