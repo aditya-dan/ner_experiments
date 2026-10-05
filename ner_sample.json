@@ -1,0 +1,42 @@
+{"openai_emails" : [
+        "md@jkspdcl.com"
+    ],
+    "openai_websites" : [
+        "www.jkspdcl.nic.in"
+    ],
+    "openai_phone_numbers" : [
+        {
+            "Number" : "0194-2458005",
+            "City" : null
+        },
+        {
+            "Number" : "0191-2430548",
+            "City" : null
+        }
+    ],
+    "openai_fax" : [
+        {
+            "Number" : "0194-2451665, 2483578",
+            "City" : null
+        },
+        {
+            "Number" : "0191-2435403",
+            "City" : null
+        }
+    ],
+
+"texts": [
+            "Extract from the minutes of 95th meeting of the Board of Directors of Jammu and Kashmir State Power Development Corporation Limited held on 09.07.2025:",
+            "ITEM NO: 95.4",
+            "APPOINTMENT OF DIRECTORS",
+            "A. APPOINTMENT OF SH. RAHUL YADAV, IAS, AS MANAGING DIRECTOR:",
+            "1. The Board unanimously passed the following resolutions:",
+            "i. \u201cResolved that Sh. Rahul Yadav, IAS (DIN: 09807078) is appointed as Director on the Board of Directors of Jammu and Kashmir State Power Development Corporation Limited pursuant to his transfer and posting as Managing Director, Jammu and Kashmir State Power Development Corporation Limited vide Government Order No.541-JK(GAD) of 2025 dated 30.04.2025.\u201d",
+            "ii. \u201cResolved further that Sh. Rahul Yadav, IAS (DIN: 09807078) is hereby appointed as Managing Director of Jammu and Kashmir State Power Development Corporation Limited pursuant to his transfer and posting as Managing Director, Jammu and Kashmir State Power Development Corporation Limited vide Government Order No.541-JK(GAD) of 2025 dated 30.04.2025.\u201d",
+            "iii. \u201cResolved further that terms and conditions of appointment including remuneration of Sh. Rahul Yadav, IAS, Managing Director, Jammu and Kashmir State Power Development Corporation Limited, shall be such as may be, determined and varied by the Board of Directors/Government from time to time.\u201d",
+            "True Copy",
+            "Company Secretary (FCS:9669)",
+            "JAMMU AND KASHMIR STATE POWER DEVELOPMENT CORPORATION LIMITED (A Government of J&amp;K Enterprises) Exhibition Ground, Srinagar, Kashmir J&amp;K-190009. Phone.: 0194-2458005. Fax: 0194-2451665, 2483578. Ashok Nagar, Satwari, Jammu J&amp;K-180004. Phone.:0191-2430548, Fax: 0191-2435403 E-mail: md@jkspdcl.com Website: www.jkspdcl.nic.in"
+        ]
+}
+
