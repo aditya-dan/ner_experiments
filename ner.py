@@ -1,4 +1,4 @@
-from transformers import BertTokenizer, BertForTokenClassification
+from transformers import BertTokenizer, BertForTokenClassification, TrainingArguments
 import json
 import re
 import itertools
@@ -69,6 +69,20 @@ model = BertForTokenClassification.from_pretrained(
     label2id=label2id,
     id2label={v: k for k, v in label2id.items()}
 )
+
+training_args = TrainingArguments(
+    output_dir="./results",
+    num_train_epochs=5,
+    per_device_train_batch_size=8,
+)
+
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=train_dataset,
+)
+
+trainer.train()
 
 encoding = encodings[0]
 
