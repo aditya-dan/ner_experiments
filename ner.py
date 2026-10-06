@@ -1,7 +1,8 @@
-from transformers import BertTokenizer
+from transformers import BertTokenizer, BertForTokenClassification
 import json
 import re
 import itertools
+import torch
 
 tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
 
@@ -61,3 +62,28 @@ for encoding, sentence_labels in zip(encodings, labels):
                 label2id[sentence_labels[word_id]]
             )
     token_labels.append(aligned_labels)
+
+model = BertForTokenClassification.from_pretrained(
+    "bert-base-uncased",
+    num_labels=len(label2id),
+    label2id=label2id,
+    id2label={v: k for k, v in label2id.items()}
+)
+
+encoding = encodings[0]
+
+input_ids = encoding["input_ids"]
+attention_mask = encoding["attention_mask"]
+
+labels_tensor = torch.tensor(
+    [token_labels[0]]
+)
+
+outputs = model(
+    input_ids=input_ids,
+    attention_mask=attention_mask,
+    labels=labels_tensor
+)
+
+print(outputs.loss)
+print(outputs.logits.shape)
