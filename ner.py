@@ -1,4 +1,4 @@
-from transformers import BertTokenizer, BertForTokenClassification, TrainingArguments
+from transformers import BertTokenizer, BertForTokenClassification, TrainingArguments, Trainer
 import json
 import re
 import itertools
